@@ -15,7 +15,6 @@ export default function Page() {
         <About />
       </Section>
       <Section>
-        Hello world
         <FAQ />
       </Section>
       <Section>

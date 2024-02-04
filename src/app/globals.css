@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  list-style: none;
+  scroll-behavior: smooth;
+  transition: all;
+  scrollbar-width: 0px;
+}
+
 /* hsl(210, 100%, 97%) light*/
 /* hsl(210, 11%, 76%) dark*/
 /* hsl(210, 7%, 36%)  light*/
 /* hsl(207, 12%, 19%) dark */
+
 @layer base {
   :root {
     --background: 210 100% 97%;

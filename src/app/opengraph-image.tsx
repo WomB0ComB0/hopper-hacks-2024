@@ -1,4 +1,3 @@
-import OpenGraph from '@/components/svg/OpenGraph'
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
@@ -40,7 +39,7 @@ export default async function Image() {
             textAlign: 'center',
           }}
         >
-          <OpenGraph />
+          HelpLine
         </div>
 
       </div>

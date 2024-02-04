@@ -17,6 +17,42 @@ interface ContactFormProps {
   message: string;
 }
 
+interface FAQListProps {
+  section1: {
+    question: string;
+    answer: string;
+  }[];
+  section2: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+interface AboutListProps {
+  icon: React.SVGAttributes<SVGElement>;
+  title: string
+  description: string
+}
+
+interface AboutListProps {
+  icon: React.SVGAttributes<SVGElement>;
+  title: string
+  description: string
+}
+
+interface OptionsListProps {
+  options: {
+    title: string;
+    description: string;
+    suboptions: {
+      options: {
+        title: string
+        description: string
+      }[]
+    }[]
+  }[];
+}
+
 interface CustomButtonProps extends FormSubmitProps {
   onClick?: () => void | Promise<void>;
   type?: "button" | "submit" | "reset";

@@ -43,7 +43,8 @@ export default function Loading(){
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <AnimatePresence>
+    // Test this out
+    <>
       <motion.div ref={scope} className="circle" style={{ width: radius * 2 }}>
         <p aria-label={text} />
         <p aria-hidden="true" className="text">
@@ -62,6 +63,6 @@ export default function Loading(){
           ))}
         </p>
       </motion.div>
-    </AnimatePresence>
+    </>
   )
 }

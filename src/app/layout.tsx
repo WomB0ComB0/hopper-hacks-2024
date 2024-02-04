@@ -8,12 +8,13 @@ import { Toaster } from "@/components/ui/toaster"
 import { ClerkProvider } from '@clerk/nextjs'
 import { ScrollToTopButton } from "@/components/custom/index";
 import Room from "./Room";
-import { constructMetadata } from "@/utils";
+import { constructMetadata, constructViewport } from "@/utils";
 import './globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = constructMetadata()
+export const viewport = constructViewport()
 
 const RootLayout: React.FC<Readonly<{
   children: React.ReactNode;
@@ -22,10 +23,10 @@ const RootLayout: React.FC<Readonly<{
 }) => {
     return (
       <>
-            <ClerkProvider>
-        <html lang={`en`}>
+        <ClerkProvider>
+          <html lang={`en`}>
             <GoogleAnalytics GA_MEASUREMENT_ID={'G-4WE13PP68G'} />
-          <body className={inter.className}>
+            <body className={inter.className}>
               <Toaster />
               <ThemeProvider
                 attribute={`class`}
@@ -42,9 +43,9 @@ const RootLayout: React.FC<Readonly<{
                   </Layout>
                 </Room>
               </ThemeProvider>
-          </body>
-        </html>
-            </ClerkProvider>
+            </body>
+          </html>
+        </ClerkProvider>
       </>
     );
   }

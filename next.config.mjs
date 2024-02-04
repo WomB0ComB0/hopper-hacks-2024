@@ -7,21 +7,14 @@ const withPwa = pwa.default({
   reloadOnOnline: true,
   swcMinify: true,
   dest: "public",
-  fallbacks: { 
-    document: `/offline`
-  },
   workboxOptions: {
     disableDevLogs: true,
   },
 })
 
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-
-};
+const nextConfig = {};
 
 export default million.next(
   withPwa(nextConfig), { auto: { rsc: true } }
 );
-

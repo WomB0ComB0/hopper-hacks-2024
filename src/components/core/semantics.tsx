@@ -58,16 +58,26 @@ export const CallToAction = () => {
       className={`
         w-full h-[80vh] flex justify-center items-center
       `}
-      style={{
-        backgroundImage: "url('/assets/images/header.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
+      <Picture
+        className={`
+          w-[100dvw]
+          h-full
+        `}  
+      >
+        <Image
+          src={'/assets/images/header.jpg'}
+          alt={``}
+          layout={`responsive`}
+          className={`
+            bg-cover bg-no-repeat bg-center
+          `}
+          fetchPriority="high"
+        />
+      </Picture>
       <Section
         className={`
-          flex w-full justify-start items-center
+          flex w-full justify-start items-center z-10
         `}
       >
         <Article
@@ -94,8 +104,8 @@ export const CallToAction = () => {
               flex flex-row gap-4
             `}
           >
-            {["Sign In", "Call now"].map((value, index) => {
-              const paths = ["/sign-in", "tel:9342187852"]
+            {["Take quiz", "Call now"].map((value, index) => {
+              const paths = ["/quiz", "tel:9342187852"]
               return (
                 <li
                   key={value}

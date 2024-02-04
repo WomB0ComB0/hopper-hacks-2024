@@ -1,4 +1,4 @@
-import { Metadata } from "next"
+import { Metadata, Viewport } from "next"
 
 export async function constructMetadata({
   image = '/assets/images/logo.png',
@@ -35,8 +35,9 @@ export async function constructMetadata({
         href: icons,
       }
     ],
+    themeColor: '#F1F8FF',
     manifest: '/pwa/manifest.json',
-    metadataBase: new URL('https://mikeodnis.com/'),
+    metadataBase: new URL('https://hopper-hacks-2024.vercel.app/'),
     other: { 
       currentYear: new Date().getFullYear(),
       timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -47,5 +48,15 @@ export async function constructMetadata({
         follow: false,
       },
     }),
+  }
+}
+
+export async function constructViewport(): Promise<Viewport> {
+  return {
+    width: 'device-width',
+    height: 'device-height',
+    initialScale: 1,
+    minimumScale: 1,
+    maximumScale: 1,
   }
 }

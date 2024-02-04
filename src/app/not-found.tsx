@@ -6,20 +6,54 @@ import { redirect } from 'next/navigation';
 
 const NotFound = () => {
   return (
-    <Main>
-      <Section>
-        <Article>
-          <h1>
+    <Main
+      className={`
+
+      `}
+    >
+      <Section
+        className={`
+
+        `}
+      >
+        <Article
+          className={`
+
+          `}
+        >
+          <h1
+            className={`
+
+            `}
+          >
             404 - Page Not Found
           </h1>
-          <p>
+          <p
+            className={`
+
+            `}
+          >
             The page you are looking for might have been removed, had its name changed or is temporarily unavailable.
           </p>
         </Article>
-        <Picture>
-          <Image src="/404.svg" alt="404" width={500} height={500} />
+        <Picture
+          className={`
+
+          `}
+        >
+          <Image
+            src="/404.svg"
+            alt="404"
+            width={500}
+            height={500}
+            className={`
+              
+            `}
+          />
         </Picture>
-        <Button onClick={redirect('/')}>
+        <Button
+          onClick={redirect('/')}
+        >
           Go back home
         </Button>
       </Section>
