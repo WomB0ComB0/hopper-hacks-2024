@@ -43,6 +43,7 @@ export const NavBar = () => {
 
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaPhone, FaEnvelope, FaMapPin } from "react-icons/fa";
+import { Input } from "../ui/input";
 
 const FooterLeftList: React.FC<{
   links: {
@@ -70,17 +71,17 @@ const FooterLeftList: React.FC<{
 
 const socialLinks = {
   links: [
-    { name: 'Instagram', link: 'https://instagram.com', icon: <FaInstagram  size={20}/> },
-    { name: 'Facebook', link: 'https://facebook.com', icon: <FaFacebook  size={20}/> },
-    { name: 'LinkedIn', link: 'https://linkedin.com', icon: <FaLinkedin  size={20}/> },
+    { name: 'Instagram', link: 'https://instagram.com', icon: <FaInstagram size={20} /> },
+    { name: 'Facebook', link: 'https://facebook.com', icon: <FaFacebook size={20} /> },
+    { name: 'LinkedIn', link: 'https://linkedin.com', icon: <FaLinkedin size={20} /> },
   ],
 };
 
 const contactInfo = {
   links: [
-    { name: 'Phone', link: '/phone', icon: <FaPhone size={20} /> },
-    { name: 'Email', link: '/email', icon: <FaEnvelope  size={20}/> },
-    { name: 'Address', link: '/address', icon: <FaMapPin  size={20}/> },
+    { name: 'Phone', link: 'tel:9342187852', icon: <FaPhone size={20} /> },
+    { name: 'Email', link: 'mailto:mikeodnis3242004@gmail.com', icon: <FaEnvelope size={20} /> },
+    { name: 'Address', link: 'https://www.google.com/maps?client=firefox-b-1-d&sca_esv=891db70b06f5b3de&output=search&q=stony+brook+university&source=lnms&entry=mc', icon: <FaMapPin size={20} /> },
   ],
 };
 
@@ -100,7 +101,7 @@ export const FooterBar = () => {
           >
             <Image
               src={`/assets/images/logo.png`}
-              className={``}              
+              className={``}
               width={100}
               height={100}
               alt={``}
@@ -140,7 +141,7 @@ export const FooterBar = () => {
               and events.
             </p>
             <form className="mt-4 flex">
-              <input
+              <Input
                 type="email"
                 className="px-4 py-2 w-full rounded-l-md"
                 placeholder="Enter your email"
@@ -165,19 +166,21 @@ export const CallToAction = () => {
         className={`
           w-[100dvw]
           h-full
-        `}  
+        `}
       >
+        <Link className="w-full h-full" href="https://www.freepik.com/free-vector/flat-background-world-mental-health-day_30828182.htm#page=7&query=mental%20health%20support&position=18&from_view=search&track=ais&uuid=63d33ebb-f48e-45a5-ac38-ebbbf01470d7" aria-label="Freepik" target="_blank" rel="noopener noreferrer">
         <Image
           src={'/assets/images/header.jpg'}
           alt={``}
           className={`
-            bg-cover bg-no-repeat bg-center w-full h-full
+          bg-cover bg-no-repeat bg-center w-full h-full
           `}
           fetchPriority="high"
           quality={100}
           width={1920}
           height={1080}
-        />
+          />
+        </Link>
       </Picture>
       <Section
         className={`
