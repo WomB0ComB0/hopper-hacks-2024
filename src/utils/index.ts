@@ -35,7 +35,6 @@ export async function constructMetadata({
         href: icons,
       }
     ],
-    themeColor: '#F1F8FF',
     manifest: '/pwa/manifest.json',
     metadataBase: new URL('https://hopper-hacks-2024.vercel.app/'),
     other: { 
@@ -58,5 +57,6 @@ export async function constructViewport(): Promise<Viewport> {
     initialScale: 1,
     minimumScale: 1,
     maximumScale: 1,
+    themeColor: '#F1F8FF',
   }
 }

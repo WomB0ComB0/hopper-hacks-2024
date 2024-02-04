@@ -63,42 +63,42 @@ const DummyLorem = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
 
 export const AboutList: AboutListProps[] = [
   {
-    icon: <FaBullseye />,
+    icon: <FaBullseye color={`#fff`} size={45} />,
     title: 'Our Mission',
     description: DummyLorem
   },
   {
-    icon: <FaEye />,
+    icon: <FaEye color={`#fff`} size={45} />,
     title: 'Our Vision',
     description: DummyLorem
   },
   {
-    icon: <FaHeart />,
+    icon: <FaHeart color={`#fff`} size={45} />,
     title: 'Our Values',
     description: DummyLorem
   },
   {
-    icon: <FaFlag />,
+    icon: <FaFlag color={`#fff`} size={45} />,
     title: 'Our Goals',
     description: DummyLorem
   },
   {
-    icon: <FaBullhorn />,
+    icon: <FaBullhorn color={`#fff`} size={45} />,
     title: 'Our Objectives',
     description: DummyLorem
   },
   {
-    icon: <FaRocket />,
+    icon: <FaRocket color={`#fff`} size={45} />,
     title: 'Our Purpose',
     description: DummyLorem
   },
   {
-    icon: <FaHandshake />,
+    icon: <FaHandshake color={`#fff`} size={45} />,
     title: 'Our Commitment',
     description: DummyLorem
   },
   {
-    icon: <FaThumbsUp />,
+    icon: <FaThumbsUp color={`#fff`} size={45} />,
     title: 'Our Promise',
     description: DummyLorem
   },
@@ -170,3 +170,42 @@ export const OptionsObject: OptionsListProps = {
     },
   ]
 }
+
+import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+
+export const FooterList: FooterProps[] = [
+  {
+    title: 'Contact Us',
+    links: [
+      {
+        name: 'Email',
+        link: '/email',
+      },
+      {
+        name: 'Phone',
+        link: '/phone',
+      },
+      {
+        name: 'Address',
+        link: '/address',
+      },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      {
+        name: 'Privacy Policy',
+        link: '/privacy',
+      },
+      {
+        name: 'Terms of Service',
+        link: '/terms',
+      },
+      {
+        name: 'Cookie Policy',
+        link: '/cookie',
+      },
+    ],
+  },
+];

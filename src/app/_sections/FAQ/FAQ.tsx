@@ -5,9 +5,20 @@ import { FAQList } from '@/constants'
 
 const FAQ: React.FC = () => {
   return (
-    <div>
+    <Div
+      className={`
+        flex flex-row gap-4 items-center justify-center
+      `}
+    >
       {Object.entries(FAQList).map(([key, section]) => (
-        <Accordion type="single" collapsible key={key}>
+        <Accordion
+          type="single"
+          collapsible
+          className={`
+            w-[50%]
+          `}
+          key={key}
+        >
           {section.map((value: { question: string, answer: string }, idx: string | number) => (
             <AccordionItem key={idx} value={`question-set-${idx}`}>
               <AccordionTrigger>
@@ -20,7 +31,7 @@ const FAQ: React.FC = () => {
           ))}
         </Accordion>
       ))}
-    </div>
+    </Div>
   )
 }
 

@@ -53,6 +53,19 @@ interface OptionsListProps {
   }[];
 }
 
+interface FooterProps {
+  title: string;
+  socials?: {
+    title: string;
+    url: string;
+    icon: React.SVGAttributes<SVGElement>;
+  }[];
+  links?: {
+    name: string;
+    link: string;
+  }[];
+}
+
 interface CustomButtonProps extends FormSubmitProps {
   onClick?: () => void | Promise<void>;
   type?: "button" | "submit" | "reset";

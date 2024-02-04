@@ -21,19 +21,68 @@ const OptionsList: React.FC = () => {
   const currentOption = OptionsObject.options[currentIndex];
 
   return (
-    <Article>
-      <Card className={`active`}>
-        <CardHeader>
-          <CardTitle>{currentOption.title}</CardTitle>
-          <CardDescription>{currentOption.description}</CardDescription>
+    <Article
+      className={`
+        flex flex-row items-center justify-center gap-4
+      `}
+    >
+      <Card
+        className={`
+          active flex flex-row
+        `}
+      >
+        <CardHeader
+          className={`
+
+          `}
+        >
+          <CardTitle
+            className={`
+
+            `}
+          >
+            {currentOption.title}
+          </CardTitle>
+          <CardDescription
+            className={`
+
+            `}
+          >
+            {currentOption.description}
+          </CardDescription>
         </CardHeader>
         {currentOption.suboptions && (
-          <ScrollArea>
+          <ScrollArea
+            className={`
+              
+            `}
+          >
             {currentOption.suboptions[0].options.map((suboption, subIndex) => (
-              <Card key={subIndex}>
-                <CardHeader>
-                  <CardTitle>{suboption.title}</CardTitle>
-                  <CardDescription>{suboption.description}</CardDescription>
+              <Card
+                key={subIndex}
+                className={`
+
+                `}
+              >
+                <CardHeader
+                  className={`
+
+                  `}
+                >
+                  <CardTitle
+                    className={`
+
+                    `}
+                  >
+                    {suboption.title}
+                  </CardTitle>
+                  <CardDescription
+                    className={`
+
+                    `}
+                  >
+                    {suboption.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
