@@ -29,7 +29,6 @@ export default function CookieBanner() {
   }, [cookieConsent]);
   return (
     <>
-      {!cookieConsent && (
         <Card className={`my-10 mx-auto max-w-max md:max-w-screen-sm
       fixed bottom-0 left-0 right-0 text-white
       flex px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-4  
@@ -58,7 +57,6 @@ export default function CookieBanner() {
             </menu>
           </CardContent>
         </Card>
-      )}
     </>
   )
 }
