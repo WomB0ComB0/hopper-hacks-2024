@@ -8,7 +8,19 @@ export default function Page() {
   return (
     <Main>
       <CallToAction />
-      <PageSections />
+      <Section>
+        <Options />
+      </Section>
+      <Section>
+        <About />
+      </Section>
+      <Section>
+        Hello world
+        <FAQ />
+      </Section>
+      <Section>
+        <Contact />
+      </Section>
     </Main>
   );
 }
@@ -19,48 +31,48 @@ import FAQ from "./_sections/FAQ/FAQ";
 import About from "./_sections/About/About";
 import Contact from "./_sections/Contact/Contact";
 
-interface SectionsListProps {
-  sections: {
-    id: string;
-    content: React.FC;
-  }[];
-}
+// interface SectionsListProps {
+//   sections: {
+//     id: string;
+//     content: React.FC;
+//   }[];
+// }
 
-const SectionsList: SectionsListProps = {
-  sections: [
-    {
-      id: "options",
-      content: Options,
-    },
-    {
-      id: "faq",
-      content: FAQ,
-    },
-    {
-      id: "about",
-      content: About,
-    },
-    {
-      id: "contact",
-      content: Contact,
-    },
-  ],
-};
+// const SectionsList: SectionsListProps = {
+//   sections: [
+//     {
+//       id: "options",
+//       content: Options,
+//     },
+//     {
+//       id: "faq",
+//       content: FAQ,
+//     },
+//     {
+//       id: "about",
+//       content: About,
+//     },
+//     {
+//       id: "contact",
+//       content: Contact,
+//     },
+//   ],
+// };
 
-const PageSections = () => {
-  return (
-    <>
-      {SectionsList.sections.map((section, index) => {
-        const Sections = section.content;
-        return (
-          <Section
-            key={index}
-            id={section.id}
-          >
-            <Sections />
-          </Section>
-        );
-      })}
-    </>
-  )
-}
+// const PageSections = () => {
+//   return (
+//     <>
+//       {SectionsList.sections.map((section, index) => {
+//         const Sections = section.content;
+//         return (
+//           <Section
+//             key={index}
+//             id={section.id}
+//           >
+//             <Sections />
+//           </Section>
+//         );
+//       })}
+//     </>
+//   )
+// }

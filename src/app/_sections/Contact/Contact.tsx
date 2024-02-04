@@ -34,82 +34,28 @@ const Contact: React.FC = () => {
       <ContactContainer
         title={`Contact form`}
         cardContent={
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className={`
-                  space-y-8
-                `}
-              autoComplete={`on`}
-            >
-              <FormField
-                control={form.control}
-                name={`name`}
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Name
-                    </FormLabel>
-                    <FormControl>
-                      <Input placeholder={``} autoCapitalize={`on`} type={`text`} required {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name={`email`}
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Email
-                    </FormLabel>
-                    <FormControl>
-                      <Input placeholder={``} type={`email`} required {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name={`subject`}
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Subject
-                    </FormLabel>
-                    <FormControl>
-                      <Input placeholder={``} type={`text`} required {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name={`message`}
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Message
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea
-                        autoCapitalize='sentences' autoCorrect='on'
-                        spellCheck="true"
-                        placeholder='Message'
-                        maxLength={500}
-                        required onChange={handleTextareaChange} />
-                      <p className='text-sm text-accent-foreground'>Characters left: {charactersLeft}</p>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </form>
-          </Form>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col mx-auto space-y-8 select-none w-[80vw]">
+            <div className="flex space-x-2">
+              <input {...form.register('name')} placeholder="Name" className="input-style" type="text" required />
+              <input {...form.register('email')} placeholder="Email" className="input-style" type="email" required />
+            </div>
+            <input {...form.register('subject')} placeholder="Subject" className="input-style" type="text" required />
+            <textarea
+              autoCapitalize="sentences"
+              autoCorrect="on"
+              spellCheck="true"
+              {...form.register('message')}
+              placeholder="Message"
+              maxLength={500}
+              required
+              onChange={handleTextareaChange}
+              className="input-style max-h-[500px] min-h-[100px]"
+            />
+            <p className="text-sm text-gray-500">Characters left: {charactersLeft}</p>
+            <button type="submit" className="submit-button">
+              Submit
+            </button>
+          </form>
         }
       />
     </>
