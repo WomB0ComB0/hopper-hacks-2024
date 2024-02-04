@@ -1,13 +1,11 @@
 import React from "react";
-import { Header, Article, Picture, PrimitiveMain as Main, Section } from "@/components/templates";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { PrimitiveMain as Main, Section } from "@/components/templates";
 import { CallToAction } from "@/components/core/semantics";
 
 export default function Page() {
   return (
     <>
-      <CallToAction />
+    <CallToAction />
     <Main
       className={`
         flex flex-col items-center justify-center gap-4 px-14 my-5
@@ -56,11 +54,13 @@ const SectionsList: SectionsListProps = {
 const PageSections = () => {
   return (
     <>
-      {SectionsList.sections.map((section, index) => {
+      {SectionsList.sections.map((section: {
+        id: string;
+        content: React.FC; }) => {
         const Sections = section.content;
         return (
           <Section
-            key={index}
+            key={section.id}
             id={section.id}
           >
             <Sections />
